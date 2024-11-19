@@ -11,11 +11,12 @@ import {
   User,
   CirclePlus,
   Menu,
+  ClipboardPlus,
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 
-const AdminDashboard = () => {
+const SuperAdminDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const menuItems = [
@@ -27,18 +28,33 @@ const AdminDashboard = () => {
     },
     {
       id: 3,
+      label: "Add New Asset Type",
+      icon: <CirclePlus className="w-4 h-4 mr-2" />,
+    },
+    {
+      id: 4,
+      label: "Add New Equipment",
+      icon: <CirclePlus className="w-4 h-4 mr-2" />,
+    },
+    {
+      id: 5,
       label: "Add New User",
       icon: <UserRoundPlus className="w-4 h-4 mr-2" />,
     },
     {
-      id: 4,
+      id: 6,
       label: "Remove User",
       icon: <UserRoundMinus className="w-4 h-4 mr-2" />,
     },
     {
-      id: 5,
+      id: 7,
       label: "Add Brand & Model",
       icon: <PackagePlus className="w-4 h-4 mr-2" />,
+    },
+    {
+      id: 8,
+      label: "Update Asset List",
+      icon: <ClipboardPlus className="w-4 h-4 mr-2" />,
     },
   ];
 
@@ -137,4 +153,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default SuperAdminDashboard;
