@@ -3,12 +3,13 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import {
-  Grid2X2,
-  Settings,
-  Users,
-  BarChart2,
+  House,
+  PackagePlus,
+  UserRoundPlus,
+  UserRoundMinus,
   LogOut,
   User,
+  CirclePlus,
   Menu,
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -18,10 +19,27 @@ const AdminDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const menuItems = [
-    { id: 1, label: "Option A", icon: <Grid2X2 className="w-4 h-4 mr-2" /> },
-    { id: 2, label: "Option B", icon: <Users className="w-4 h-4 mr-2" /> },
-    { id: 3, label: "Option C", icon: <BarChart2 className="w-4 h-4 mr-2" /> },
-    { id: 4, label: "Option D", icon: <Settings className="w-4 h-4 mr-2" /> },
+    { id: 1, label: "Home", icon: <House className="w-4 h-4 mr-2" /> },
+    {
+      id: 2,
+      label: "Add New Category",
+      icon: <CirclePlus className="w-4 h-4 mr-2" />,
+    },
+    {
+      id: 3,
+      label: "Add New User",
+      icon: <UserRoundPlus className="w-4 h-4 mr-2" />,
+    },
+    {
+      id: 4,
+      label: "Remove User",
+      icon: <UserRoundMinus className="w-4 h-4 mr-2" />,
+    },
+    {
+      id: 5,
+      label: "Add Brand & Model",
+      icon: <PackagePlus className="w-4 h-4 mr-2" />,
+    },
   ];
 
   const userProfile = {
@@ -100,7 +118,7 @@ const AdminDashboard = () => {
       <div className="flex-1 p-8 lg:p-8 pt-20 lg:pt-8">
         <div className="bg-white rounded-lg shadow-lg p-6 h-full">
           <h2 className="text-2xl font-semibold mb-4">
-            Welcome to Admin Dashboard
+            Welcome to Super Admin Dashboard
           </h2>
           <p className="text-gray-600">
             Select an option from the sidebar to get started.
