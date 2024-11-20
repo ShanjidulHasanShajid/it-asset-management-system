@@ -17,7 +17,7 @@ import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import Link from "next/link";
 
-const SuperAdminDashboard = () => {
+const AssetAdministration = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const menuItems = [
@@ -123,24 +123,20 @@ const SuperAdminDashboard = () => {
 
         {/* Logout Section */}
         <div className="p-4">
-          <Link href="/">
-            <Button
-              variant="ghost"
-              className="w-full justify-start text-red-500 hover:text-red-700 hover:bg-red-50"
-            >
-              <LogOut className="w-4 h-4 mr-2" />
-              Logout
-            </Button>
-          </Link>
+          <Button
+            variant="ghost"
+            className="w-full justify-start text-red-500 hover:text-red-700 hover:bg-red-50"
+          >
+            <LogOut className="w-4 h-4 mr-2" />
+            Logout
+          </Button>
         </div>
       </div>
 
       {/* Main Content Area */}
       <div className="flex-1 p-8 lg:p-8 pt-20 lg:pt-8">
         <div className="bg-white rounded-lg shadow-lg p-6 h-full">
-          <h2 className="text-2xl font-semibold mb-4">
-            Welcome to Super Admin Dashboard
-          </h2>
+          <h2 className="text-2xl font-semibold mb-4">Asset Administration</h2>
           <p className="text-gray-600">
             Select an option from the sidebar to get started.
           </p>
@@ -158,4 +154,4 @@ const SuperAdminDashboard = () => {
   );
 };
 
-export default SuperAdminDashboard;
+export default AssetAdministration;

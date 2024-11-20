@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import TableView from "./table";
 import { Button } from "@/components/ui/button";
 import {
   House,
@@ -17,7 +18,7 @@ import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import Link from "next/link";
 
-const SuperAdminDashboard = () => {
+const ViewAsset = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const menuItems = [
@@ -87,7 +88,6 @@ const SuperAdminDashboard = () => {
       >
         {/* Logo/Title Section */}
         <div className="p-6 pl-16 lg:pl-6">
-          {/* Added padding-left for spacing */}
           <h1 className="text-xl font-bold">Super Admin Dashboard</h1>
         </div>
         <Separator />
@@ -136,14 +136,21 @@ const SuperAdminDashboard = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-1 p-8 lg:p-8 pt-20 lg:pt-8">
-        <div className="bg-white rounded-lg shadow-lg p-6 h-full">
-          <h2 className="text-2xl font-semibold mb-4">
-            Welcome to Super Admin Dashboard
-          </h2>
-          <p className="text-gray-600">
-            Select an option from the sidebar to get started.
-          </p>
+      <div className="flex-1 flex flex-col min-h-screen overflow-hidden">
+        <div className="flex-1 p-8 lg:p-8 pt-20 lg:pt-8 overflow-hidden">
+          {/* mother div for tableview */}
+          <div className="bg-white rounded-lg shadow-lg p-6 h-full overflow-auto">
+            <h2 className="text-2xl font-semibold mb-4">View Assets</h2>
+            <p className="text-gray-600">
+              Select an option from the sidebar to get started.
+            </p>
+            <p>
+              <br></br>
+            </p>
+            <div className="overflow-auto">
+              <TableView />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -158,4 +165,4 @@ const SuperAdminDashboard = () => {
   );
 };
 
-export default SuperAdminDashboard;
+export default ViewAsset;
