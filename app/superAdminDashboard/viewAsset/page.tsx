@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import TableView from "./table";
+import TableView from "../../../components/ui/tableView";
 import { Button } from "@/components/ui/button";
 import {
   House,

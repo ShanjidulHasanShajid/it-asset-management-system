@@ -44,36 +44,13 @@ export default function EquipmentForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-8 p-4">
+    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-8 p-8">
       {/* Identification Details */}
       <Card>
         <CardHeader>
           <CardTitle>Identification Details</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-4 sm:grid-cols-2">
-          {/* <div className="space-y-2">
-            <Label htmlFor="itemId">Item ID</Label>
-            <Input id="itemId" placeholder="Enter Item ID" />
-          </div> */}
-          {/* <div className="space-y-2">
-            <Label htmlFor="equipmentId">Equipment ID</Label>
-            <Input id="equipmentId" placeholder="Enter Equipment ID" />
-          </div> */}
-
-          {/* <div className="space-y-2">
-            <Label htmlFor="statusDetails">Status Details</Label>
-            <Select>
-              <SelectTrigger>
-                <SelectValue placeholder="Select status" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="active">Active</SelectItem>
-                <SelectItem value="inactive">Inactive</SelectItem>
-                <SelectItem value="maintenance">Maintenance</SelectItem>
-              </SelectContent>
-            </Select>
-          </div> */}
-
           <div className="space-y-2">
             <Label htmlFor="statusDetails">Equipment Type*</Label>
             <Select>

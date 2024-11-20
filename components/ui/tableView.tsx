@@ -14,7 +14,6 @@ const dummyData = [
     // itemId: "ITEM001",
     equipmentName: "EQ001",
     itemName: "Dell Laptop",
-    itemVariation: "Latitude 5420",
     modelId: "MOD001",
     tagId: "TAG001",
     manufactureNo: "MFG123456",

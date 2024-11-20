@@ -16,6 +16,8 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import Link from "next/link";
+import AddCategory from "@/components/ui/addCategory";
+import AddSubCategory from "@/components/ui/addSubCategory";
 
 const AssetAdministration = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -135,11 +137,17 @@ const AssetAdministration = () => {
 
       {/* Main Content Area */}
       <div className="flex-1 p-8 lg:p-8 pt-20 lg:pt-8">
-        <div className="bg-white rounded-lg shadow-lg p-6 h-full">
+        {/* mother div for EquipmentForm */}
+        <div className="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
           <h2 className="text-2xl font-semibold mb-4">Asset Administration</h2>
-          <p className="text-gray-600">
-            Select an option from the sidebar to get started.
+          <p className="text-gray-600 mb-4">
+            Fill out the form to add assets to the database.
           </p>
+          {/* Wrapper with scrollable behavior */}
+          <div className="flex-1 overflow-y-auto">
+            <AddCategory />
+            <AddSubCategory />
+          </div>
         </div>
       </div>
 
