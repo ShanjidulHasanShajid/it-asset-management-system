@@ -18,6 +18,95 @@ import { useState } from "react";
 import Link from "next/link";
 import AddCategory from "@/components/ui/addCategory";
 import AddSubCategory from "@/components/ui/addSubCategory";
+import TableView from "@/components/ui/tableView";
+
+const dummyData = [
+  {
+    categoryID: "EQ001",
+    categoryName: "Dell Laptop",
+  },
+  {
+    categoryID: "EQ001",
+    categoryName: "Dell Laptop",
+  },
+  {
+    categoryID: "EQ001",
+    categoryName: "Dell Laptop",
+  },
+  {
+    categoryID: "EQ001",
+    categoryName: "Dell Laptop",
+  },
+  {
+    categoryID: "EQ001",
+    categoryName: "Dell Laptop",
+  },
+  {
+    categoryID: "EQ001",
+    categoryName: "Dell Laptop",
+  },
+];
+const columns = [
+  { key: "categoryID", label: "Category ID" },
+  { key: "categoryName", label: "Category Name" },
+];
+
+const dummyData2 = [
+  {
+    subcategoryID: "EQ001",
+    subcategoryName: "Dell Laptop",
+    categoryID: "cat1",
+    categoryName: "name2",
+  },
+  {
+    subcategoryID: "EQ001",
+    subcategoryName: "Dell Laptop",
+    categoryID: "cat2",
+    categoryName: "name3",
+  },
+  {
+    subcategoryID: "EQ001",
+    subcategoryName: "Dell Laptop",
+    categoryID: "cat1",
+    categoryName: "name2",
+  },
+  {
+    subcategoryID: "EQ001",
+    subcategoryName: "Dell Laptop",
+    categoryID: "cat2",
+    categoryName: "name3",
+  },
+  {
+    subcategoryID: "EQ001",
+    subcategoryName: "Dell Laptop",
+    categoryID: "cat1",
+    categoryName: "name2",
+  },
+  {
+    subcategoryID: "EQ001",
+    subcategoryName: "Dell Laptop",
+    categoryID: "cat2",
+    categoryName: "name3",
+  },
+  {
+    subcategoryID: "EQ001",
+    subcategoryName: "Dell Laptop",
+    categoryID: "cat1",
+    categoryName: "name2",
+  },
+  {
+    subcategoryID: "EQ001",
+    subcategoryName: "Dell Laptop",
+    categoryID: "cat2",
+    categoryName: "name3",
+  },
+];
+const columns2 = [
+  { key: "subcategoryID", label: "Sub Category ID" },
+  { key: "subcategoryName", label: "Sub Category Name" },
+  { key: "categoryID", label: "Category ID" },
+  { key: "categoryName", label: "Category Name" },
+];
 
 const AssetAdministration = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -141,12 +230,33 @@ const AssetAdministration = () => {
         <div className="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
           <h2 className="text-2xl font-semibold mb-4">Asset Administration</h2>
           <p className="text-gray-600 mb-4">
-            Fill out the form to add assets to the database.
+            This section is used to add new category and sub category to the
+            database.
           </p>
           {/* Wrapper with scrollable behavior */}
           <div className="flex-1 overflow-y-auto">
             <AddCategory />
             <AddSubCategory />
+            {/* Table area start */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-medium text-gray-900 mb-4">
+                  Category Table
+                </h3>
+                <div className="border rounded-lg overflow-hidden bg-white">
+                  <TableView data={dummyData} columns={columns} />
+                </div>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-medium text-gray-900 mb-4">
+                  Sub Category Table
+                </h3>
+                <div className="border rounded-lg overflow-hidden bg-white">
+                  <TableView data={dummyData2} columns={columns2} />
+                </div>
+              </div>
+            </div>
+            {/* Table area end */}
           </div>
         </div>
       </div>

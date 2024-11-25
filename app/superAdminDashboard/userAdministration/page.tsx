@@ -16,6 +16,46 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import Link from "next/link";
+import TableView from "@/components/ui/tableView";
+
+const dummyData = [
+  {
+    userID: "EQ001",
+    userName: "Dell Laptop",
+    password: "1234",
+    teamID: "teamID",
+  },
+  {
+    userID: "EQ001",
+    userName: "Dell Laptop",
+    password: "1234",
+    teamID: "teamID",
+  },
+  {
+    userID: "EQ001",
+    userName: "Dell Laptop",
+    password: "1234",
+    teamID: "teamID",
+  },
+  {
+    userID: "EQ001",
+    userName: "Dell Laptop",
+    password: "1234",
+    teamID: "teamID",
+  },
+  {
+    userID: "EQ001",
+    userName: "Dell Laptop",
+    password: "1234",
+    teamID: "teamID",
+  },
+];
+const columns = [
+  { key: "userID", label: "User ID" },
+  { key: "userName", label: "User Name" },
+  { key: "password", label: "Password" },
+  { key: "teamID", label: "Team ID" },
+];
 
 const AssetAdministration = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -134,12 +174,26 @@ const AssetAdministration = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-1 p-8 lg:p-8 pt-20 lg:pt-8">
-        <div className="bg-white rounded-lg shadow-lg p-6 h-full">
-          <h2 className="text-2xl font-semibold mb-4">User Administration</h2>
-          <p className="text-gray-600">
-            Select an option from the sidebar to get started.
-          </p>
+      <div className="flex-1 flex flex-col min-h-screen overflow-hidden">
+        <div className="flex-1 p-8 lg:p-8 pt-20 lg:pt-8 overflow-hidden">
+          {/* mother div for tableview */}
+          <div className="bg-white rounded-lg shadow-lg p-6 h-full overflow-auto">
+            <h2 className="text-2xl font-semibold mb-4">User Administration</h2>
+            <p className="text-gray-600">
+              Add Delete Users and Manage asset access.
+            </p>
+
+            <div className="overflow-auto mt-4">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-medium text-gray-900 mb-4">
+                  Users Table
+                </h3>
+                <div className="border rounded-lg overflow-hidden bg-white">
+                  <TableView data={dummyData} columns={columns} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

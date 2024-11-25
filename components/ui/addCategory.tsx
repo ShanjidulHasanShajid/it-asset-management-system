@@ -49,7 +49,7 @@ export default function AddCategory() {
             </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                <AlertDialogTitle>Adding new Category</AlertDialogTitle>
                 <AlertDialogDescription>
                   This action will add another main category to the database.
                   Are you sure about this?

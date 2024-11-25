@@ -79,10 +79,10 @@ export default function AddSubCategory() {
             </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                <AlertDialogTitle>Adding new Sub-Category</AlertDialogTitle>
                 <AlertDialogDescription>
-                  This action will add another main category to the database.
-                  Are you sure about this?
+                  This action will add another sub category to the database. Are
+                  you sure about this?
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
