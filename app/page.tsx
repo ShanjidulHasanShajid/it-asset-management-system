@@ -22,8 +22,8 @@ import { useState } from "react";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
-    uid: "",
-    team: "",
+    user_id: "",
+    user_type: "",
     password: "",
   });
 
@@ -53,9 +53,9 @@ const LoginForm = () => {
               <Input
                 id="uid"
                 placeholder="Enter your UID"
-                value={formData.uid}
+                value={formData.user_id}
                 onChange={(e) =>
-                  setFormData({ ...formData, uid: e.target.value })
+                  setFormData({ ...formData, user_id: e.target.value })
                 }
                 required
               />
@@ -64,9 +64,9 @@ const LoginForm = () => {
             <div className="space-y-2">
               <Label htmlFor="team">User Type</Label>
               <Select
-                value={formData.team}
+                value={formData.user_type}
                 onValueChange={(value) =>
-                  setFormData({ ...formData, team: value })
+                  setFormData({ ...formData, user_type: value })
                 }
               >
                 <SelectTrigger id="team">
